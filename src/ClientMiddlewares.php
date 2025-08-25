@@ -97,11 +97,9 @@ class ClientMiddlewares
             return false; // Give up after 3 tries.
         }
 
-        dd($api);
         $response = (new Guzzle)->post(Client::AUTH_TOKEN, [
             'form_params' => [
                 'type' => 'refresh',
-                'refresh_token' => $api['refresh_token'],
                 'client_id' => $config['services.37signals.client_id'],
                 'client_secret' => $config['services.37signals.client_secret'],
                 'redirect_uri' => $config['services.37signals.redirect'],

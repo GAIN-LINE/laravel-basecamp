@@ -106,4 +106,11 @@ class Projects extends AbstractSection
     {
         return $this->client->delete(sprintf('projects/%d.json', $id));
     }
+
+    public function people($id)
+    {
+        $project = $this->client->get(sprintf('projects/%d/people.json', $id));
+
+        return new Project($this->response($project));
+    }
 }

@@ -16,7 +16,7 @@ class BasecampManager
         $this->client->init([
             'href' => 'https://3.basecampapi.com/4848484/',
             'token' => Setting::firstWhere('key','basecamp_token')->value,
-            'user_agent' => ''
+            'user_agent' => config('service.37signals.user-agent')
         ]);
         $this->client->setAccountId(config('basecamp.account_id'));
     }
@@ -39,5 +39,7 @@ class BasecampManager
         return $this->client->todosets($bucket);
     }
 
-    // Add more endpoint shortcuts here as needed
+    public function people() {
+        return $this->client->people();
+    }
 }
