@@ -42,4 +42,8 @@ class BasecampManager
     public function people() {
         return $this->client->people();
     }
+
+    public function webhooks($bucket) {
+        return $this->client->webhooks($bucket);
+    }
 }
