@@ -38,7 +38,6 @@ abstract class AbstractSection
     public function __construct(Client $client, array $parameters = [])
     {
         $this->client = $client;
-        dump($parameters);
         $this->bucket = $parameters[0] ?? null;
         $this->parent = $parameters[1] ?? null;
     }
