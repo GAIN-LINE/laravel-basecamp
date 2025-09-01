@@ -9,7 +9,7 @@ abstract class AbstractModel
      *
      * @var array
      */
-    protected $attributes;
+    public $attributes;
 
     /**
      * Initialize the Basecamp Instance Object.

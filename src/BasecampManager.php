@@ -26,9 +26,9 @@ class BasecampManager
         return $this->client->projects();
     }
 
-    public function todos($bucket, $todoset)
+    public function todos($bucket, $todolist)
     {
-        return $this->client->todos($bucket, $todoset);
+        return $this->client->todos($bucket, $todolist);
     }
 
     public function todolists($bucket, $todoset) {
@@ -46,4 +46,9 @@ class BasecampManager
     public function webhooks($bucket) {
         return $this->client->webhooks($bucket);
     }
+
+    public function todolistGroups($bucket, $todolist) {
+        return $this->client->todolistGroups($bucket, $todolist);
+    }
+
 }
