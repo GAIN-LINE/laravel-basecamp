@@ -1,7 +1,6 @@
 {
     "name": "gainline/laravel-basecamp",
     "description": "API Wrapper for Basecamp3",
-    "version" : "1.0.1",
     "require": {
         "php": ">=8.0",
         "ext-fileinfo": "*",
